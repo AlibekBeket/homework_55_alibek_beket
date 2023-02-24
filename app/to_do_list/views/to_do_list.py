@@ -25,8 +25,12 @@ def add_view(request: WSGIRequest):
             'to_do_status': to_do_status
         }
         return render(request, 'add_page.html', context=context)
-    if len(request.POST.get('title')) == 0 or '  ' in request.POST.get('title'):
-        errors['title_error'] = 'Вы ничего не ввели в поле заголовка или ввели два пробела подряд и больше'
+    if len(request.POST.get('title')) <= 1 or ' ' == request.POST.get('title')[0]:
+        errors['title_error'] = 'Вы ничего не ввели в поле заголовка или ввели 1 символ или ввели один пробел и больше в начало загаловка'
+    elif len(request.POST.get('title')) > 200:
+        errors['title_error'] = 'Вы ввели больше 200 символов'
+    if len(request.POST.get('description')) > 1000 or len(request.POST.get('description')) > 0 and ' ' == request.POST.get('description')[0]:
+        errors['description_error'] = 'Вы ввели больше 1000 символов в поле описания или ввели один пробел и больше в начало загаловка'
     to_do_add = ToDo()
     to_do_add.title = request.POST.get('title')
     to_do_add.description = request.POST.get('description')
