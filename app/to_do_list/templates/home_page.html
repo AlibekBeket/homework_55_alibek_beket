@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}To Do List{% endblock %}
+{% block navbar %}
+<a href="{% url 'to_do_add' %}">Add To Do</a>
+{% endblock %}
+{% block content %}
+<h1>To-Do List</h1>
+{% for to_do in to_do_list %}
+<h2 class="to_do_row">{{ to_do.title }}<br>Status: {{ to_do.status }}<br><a
+        href="{% url 'to_do_detail' to_do.pk %}">Подробнее</a></h2>
+{% endfor %}
+<div class="endblock"></div>
+{% endblock %}

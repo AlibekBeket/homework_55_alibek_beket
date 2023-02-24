@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: #fffee8;
+}
+body{
+    margin-top: 60px;
+    background: DarkRed;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+h1{
+    text-align: center
+}
+.to_do_row{
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+}
+.navbar{
+    display: block;
+    background: Teal;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+.menu{
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+.menu li {
+    display: inline-block;
+}
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}
+.endblock{
+    height: 50px;
+}
+.form{
+    font-size: 20px;
+    margin-top: 50px;
+}
+.form_row{
+    margin-top: 20px;
+}
+.form_row input{
+    width: 200px;
+    color: DarkRed;
+}
+.form_row select{
+    width: 200px;
+    color: DarkRed;
+}
+.form_row option{
+    width: 200px;
+    color: DarkRed;
+}
+.description{
+    height: 150px;
+}
+.description textarea{
+    color: DarkRed;
+}
+.endblock{
+    height: 50px;
+}
+.to_do_row{
+    margin-bottom: 20px;
+}
