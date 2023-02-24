@@ -47,6 +47,7 @@ def detail_view(request, pk):
         'to_do_status': to_do_status
     })
 
+
 def update_view(request, pk):
     to_do = get_object_or_404(ToDo, pk=pk)
     if not request.POST:
@@ -61,3 +62,13 @@ def update_view(request, pk):
     to_do.save()
     return redirect('to_do_detail', pk=to_do.pk)
 
+
+def delete_view(request, pk):
+    to_do = get_object_or_404(ToDo, pk=pk)
+    return render(request, 'to_do_confirm_delete.html', context={'to_do': to_do})
+
+
+def confirm_delete(request, pk):
+    to_do = get_object_or_404(ToDo, pk=pk)
+    to_do.delete()
+    return redirect('to_do_list')

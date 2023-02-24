@@ -4,6 +4,7 @@
 <a href="{% url 'to_do_list' %}">To Do List</a>
 <a href="{% url 'to_do_add' %}">Add To Do</a>
 <a href="{% url 'to_do_update' to_do.pk %}">Update To Do</a>
+<a href="{% url 'to_do_delete' to_do.pk %}">Delete To Do</a>
 {% endblock %}
 {% block content %}
 <h1>{{ to_do.title }}</h1>

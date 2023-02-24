@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}To Do{% endblock %}
+{% block content %}
+<h1>Вы точно хотите удалить заметку</h1>
+<h2 class="to_do_row">Title: {{ to_do.title }}<br>{{ to_do.description }}<br>Status: {{ to_do.status }}<br>{{ to_do.date }}</h2>
+<form action="{% url 'confirm_delete' to_do.pk %}" method="post">
+    {% csrf_token %}
+    <div class="form_row">
+        <input type="submit" value="Удалить">
+    </div>
+    <div class="form_row">
+        <a href="{% url 'to_do_list' %}">Отмена</a>
+    </div>
+</form>
+{% endblock %}
