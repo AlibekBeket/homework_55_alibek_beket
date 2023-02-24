@@ -2,7 +2,7 @@
 {% block title %}To Do{% endblock %}
 {% block content %}
 <h1>Вы точно хотите удалить заметку</h1>
-<h2 class="to_do_row">Title: {{ to_do.title }}<br>{{ to_do.description }}<br>Status: {{ to_do.status }}<br>{{ to_do.date }}</h2>
+{% include 'partial/to_do_info.html' %}
 <form action="{% url 'confirm_delete' to_do.pk %}" method="post">
     {% csrf_token %}
     <div class="form_row">

@@ -7,6 +7,5 @@
 <a href="{% url 'to_do_delete' to_do.pk %}">Delete To Do</a>
 {% endblock %}
 {% block content %}
-<h1>{{ to_do.title }}</h1>
-<h2 class="to_do_row">{{ to_do.description }}<br>Status: {{ to_do.status }}<br>{{ to_do.date }}</h2>
+{% include 'partial/to_do_info.html' %}
 {% endblock %}
