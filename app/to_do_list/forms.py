@@ -18,10 +18,8 @@ class ToDoForm(forms.ModelForm):
             'date': 'Дата'
         }
 
-
     def clean_title(self):
         title = self.cleaned_data.get('title')
         if len(title) < 3 or title[0] == " ":
             raise ValidationError('Заголовок должен быть больше 2 символов и не должен начинаться на пробел')
         return title
-
