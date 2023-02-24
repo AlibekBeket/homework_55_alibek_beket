@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     font-size: 25px;
-    color: #fffee8;
 }
 body{
     margin-top: 60px;
     background: DarkRed;
+    color: #fffee8;
 }
 .container{
     margin: 0 auto;
@@ -56,10 +56,27 @@ h1{
 }
 .form{
     font-size: 20px;
-    margin-top: 50px;
+    margin: 50px 0;
+}
+.form p{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.form textarea{
+    color: DarkRed;
+}
+.form input{
+    color: DarkRed;
+}
+.form select{
+    color: DarkRed;
+}
+.form option{
+    color: DarkRed;
 }
 .form_row{
     margin: 10px 0;
+    color: DarkRed;
 }
 .form_row input{
     width: 200px;

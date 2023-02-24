@@ -1,0 +1,152 @@
+[
+{
+  "model": "to_do_list.todo",
+  "pk": 9,
+  "fields": {
+    "title": "aAaaaa",
+    "description": "sdgdsag",
+    "status": "in progress",
+    "date": null
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 10,
+  "fields": {
+    "title": "Classwork_55",
+    "description": "Subaru",
+    "status": "in progress",
+    "date": "2023-02-03"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 13,
+  "fields": {
+    "title": "party2",
+    "description": "Woooo",
+    "status": "new",
+    "date": "2023-02-15"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 19,
+  "fields": {
+    "title": "main",
+    "description": "",
+    "status": "new",
+    "date": null
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 20,
+  "fields": {
+    "title": "Mine",
+    "description": "milk",
+    "status": "made",
+    "date": "2023-02-20"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 21,
+  "fields": {
+    "title": "Alibek work",
+    "description": "PPPPP",
+    "status": "made",
+    "date": "2023-02-11"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 22,
+  "fields": {
+    "title": "Ali",
+    "description": "asdfasdgfs",
+    "status": "in progress",
+    "date": "2018-03-07"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 23,
+  "fields": {
+    "title": "Almaty",
+    "description": "Big city",
+    "status": "in progress",
+    "date": "2023-02-03"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 28,
+  "fields": {
+    "title": "Hello Almaty",
+    "description": "HFsdashfdjgf",
+    "status": "in progress",
+    "date": "2020-05-12"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 29,
+  "fields": {
+    "title": "fdjgfj",
+    "description": "hglgjhl",
+    "status": "new",
+    "date": "2018-03-06"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 30,
+  "fields": {
+    "title": "Heeee",
+    "description": "",
+    "status": "new",
+    "date": null
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 31,
+  "fields": {
+    "title": "аы       ф",
+    "description": "",
+    "status": "new",
+    "date": null
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 32,
+  "fields": {
+    "title": "Aliondsfjhgtf",
+    "description": "fgkfjhljkh;kfdsds",
+    "status": "made",
+    "date": null
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 33,
+  "fields": {
+    "title": "Dgashsfjsgfd",
+    "description": "",
+    "status": "new",
+    "date": "2020-05-12"
+  }
+},
+{
+  "model": "to_do_list.todo",
+  "pk": 34,
+  "fields": {
+    "title": "dsfjgfhjdg",
+    "description": "",
+    "status": "new",
+    "date": "2018-03-06"
+  }
+}
+]

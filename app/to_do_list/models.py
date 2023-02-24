@@ -8,7 +8,7 @@ class ToDo(models.Model):
         ('in progress', 'В процессе'),
         ('made', 'Сделано')
     ]
-    title = models.TextField(max_length=200, null=False, blank=False, verbose_name="Заголовок")
+    title = models.CharField(max_length=200, null=False, blank=False, verbose_name="Заголовок")
     description = models.TextField(max_length=1000, null=True, blank=True, verbose_name="Описание")
     status = models.CharField(max_length=40, null=False, blank=False, verbose_name='Статус', choices=choices,
                               default='new')
