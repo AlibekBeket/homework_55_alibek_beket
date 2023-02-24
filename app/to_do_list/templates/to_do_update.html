@@ -7,31 +7,7 @@
 <h1>Update To Do</h1>
 <div class="form">
     <form action="{% url 'to_do_update' to_do.pk %}" method="post">
-        {% csrf_token %}
-        <div class="form_row">
-            <input placeholder="Заголовок" maxlength="200" type="text" value="{{ to_do.title }}" name="title">
-        </div>
-        <div class="form_row description">
-            <textarea placeholder="Описание" maxlength="1000" rows="5" cols="24" name="description">{{ to_do.description }}</textarea>
-        </div>
-        <div class="form_row">
-            <span>Статус - </span>
-            <select name="status">
-                {% for stat in to_do_status %}
-                    {% if stat.0 == to_do.status %}
-                        <option value="{{ stat.0 }}" selected>{{ stat.1 }}</option>
-                    {% else %}
-                        <option value="{{ stat.0 }}">{{ stat.1 }}</option>
-                    {% endif %}
-                {% endfor %}
-            </select>
-        </div>
-        <div class="form_row">
-            <input type="date"  value="{{ to_do.date }}" name="date">
-        </div>
-        <div class="form_row">
-            <input type="submit" value="Подтвердить">
-        </div>
+        {% include 'partial/to_do_form.html' with button_text="Обновить" %}
     </form>
 </div>
 {% endblock %}

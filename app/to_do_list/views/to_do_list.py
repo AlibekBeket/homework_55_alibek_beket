@@ -19,7 +19,11 @@ def home_view(request: WSGIRequest):
 
 def add_view(request: WSGIRequest):
     if not request.POST:
-        return render(request, 'add_page.html')
+        to_do_status = ToDo().choices
+        context = {
+            'to_do_status': to_do_status
+        }
+        return render(request, 'add_page.html', context=context)
     if request.POST.get('date') == "":
         date = None
     else:
