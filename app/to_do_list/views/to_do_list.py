@@ -18,24 +18,39 @@ def home_view(request: WSGIRequest):
 
 
 def add_view(request: WSGIRequest):
+    errors = {}
     if not request.POST:
         to_do_status = ToDo().choices
         context = {
             'to_do_status': to_do_status
         }
         return render(request, 'add_page.html', context=context)
+    if len(request.POST.get('title')) == 0 or '  ' in request.POST.get('title'):
+        errors['title_error'] = 'Вы ничего не ввели в поле заголовка или ввели два пробела подряд и больше'
+    to_do_add = ToDo()
+    to_do_add.title = request.POST.get('title')
+    to_do_add.description = request.POST.get('description')
+    to_do_add.status = request.POST.get('status')
     if request.POST.get('date') == "":
-        date = None
+        to_do_add.date = None
     else:
-        date = request.POST.get('date')
-    to_do_add = {
-        'description': request.POST.get('description'),
-        'status': request.POST.get('status'),
-        'date': date,
-        'title': request.POST.get('title')
+        to_do_add.date = request.POST.get('date')
+    if errors:
+        to_do_status = ToDo().choices
+        context = {
+            'to_do': to_do_add,
+            'errors': errors,
+            'to_do_status': to_do_status
+        }
+        return render(request, 'add_page.html', context=context)
+    to_do_add_create = {
+        'title': to_do_add.title,
+        'description': to_do_add.description,
+        'status': to_do_add.status,
+        'date': to_do_add.date
     }
-    ToDo.objects.create(**to_do_add)
-    return redirect(reverse('to_do_list'))
+    to_do = ToDo.objects.create(**to_do_add_create)
+    return redirect('/to_do/' + str(to_do.pk))
 
 
 def detail_view(request, pk):
@@ -69,6 +84,12 @@ def update_view(request, pk):
 
 def delete_view(request, pk):
     to_do = get_object_or_404(ToDo, pk=pk)
+    to_do_status = ToDo().choices
+    for status in to_do_status:
+        if status[0] == to_do.status:
+            to_do.status = status[1]
+    if to_do.date == None:
+        to_do.date = ''
     return render(request, 'to_do_confirm_delete.html', context={'to_do': to_do})
 
 

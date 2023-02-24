@@ -1,5 +1,8 @@
 {% csrf_token %}
         <div class="form_row">
+            <div class="error_block">
+                <span class="error_print">{{ errors.title_error }}</span>
+            </div>
             <input placeholder="Заголовок" maxlength="200" type="text" value="{{ to_do.title }}" name="title">
         </div>
         <div class="form_row description">

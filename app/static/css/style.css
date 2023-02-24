@@ -85,3 +85,7 @@ h1{
 .to_do_row{
     margin-bottom: 20px;
 }
+.error_block{
+    color: White;
+    padding-bottom: 10px;
+}
